@@ -1,5 +1,7 @@
 server:
   port: ${PORT:8080}
+  servlet:
+    context-path: /gateway-api
 spring:
   cloud:
     gateway:
@@ -12,3 +14,7 @@ spring:
           uri: lb://movie-service
           predicates:
             - Path=/movies/**
+        - id: GatewayRoute
+          uri: lb://API-GATEWAY
+          predicates:
+            - Path=/gateway-api/**
