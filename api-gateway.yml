@@ -9,11 +9,11 @@ spring:
         - id: CatalogRoute
           uri: lb://catalog-service
           predicates:
-            - Path=/catalogs/**
+            - Path=/catalog-api/**
         - id: MovieRoute
           uri: lb://movie-service
           predicates:
-            - Path=/movies/**
+            - Path=/movie-api/**
         - id: GatewayRoute
           uri: lb://API-GATEWAY
           predicates:
