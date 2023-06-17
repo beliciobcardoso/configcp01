@@ -13,9 +13,9 @@ spring:
           filters:
             - name: CircuitBreaker
               args:
-                name: movie-service
-                fallbackUri: forward:/movie-fallback/moviePostFallback
-            - name: PreFiltroCatalog
+                name: apigateway
+                fallbackUri: forward:/fallback/postFallback
+            - name: PreFiltro
         - id: MovieRoute
           uri: lb://movie-service
           predicates:
