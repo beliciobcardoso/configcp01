@@ -10,11 +10,6 @@ spring:
           uri: lb://catalog-service
           predicates:
             - Path=/catalog-api/**
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: apigateway
-                fallbackUri: forward:/fallback/postFallback
         - id: MovieRoute
           uri: lb://movie-service
           predicates:
