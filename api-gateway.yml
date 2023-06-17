@@ -14,6 +14,11 @@ spring:
           uri: lb://movie-service
           predicates:
             - Path=/movie-api/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: movie-service
+                fallbackUri: forward:/movie-fallback/moviePostFallback
         - id: GatewayRoute
           uri: lb://API-GATEWAY
           predicates:
