@@ -19,6 +19,7 @@ spring:
               args:
                 name: movie-service
                 fallbackUri: forward:/movie-fallback/moviePostFallback
+            - name: PreFiltroCatalog
         - id: GatewayRoute
           uri: lb://API-GATEWAY
           predicates:
