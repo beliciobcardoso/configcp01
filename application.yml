@@ -6,10 +6,6 @@ spring:
     password: guest
     host: ${RABBITMQ-HOST:localhost}
     port: 5672
-  eureka:
-    client:
-      service-url:
-        defaultZone: ${EUREKA-SERVER-URL:http://localhost:5000/eureka}
   health:
     circuitBreaker:
       enabled: true
@@ -28,7 +24,10 @@ info:
   mail: belloinfo@gmail.com
 server:
   port: ${PORT:9999}
-
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA-SERVER-URL:http://localhost:5000/eureka}
 ## Resilience4J configs for CircuitBreaker Pattern
 resilience4j:
   circuitbreaker:
