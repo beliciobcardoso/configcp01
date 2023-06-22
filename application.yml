@@ -6,11 +6,10 @@ spring:
     password: guest
     host: ${RABBITMQ-HOST:localhost}
     port: 5672
-  # eureka:
-  #   client:
-  #     service-url:
-  #       defaultZone: http://teste:8761/eureka
-  #       management:
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA-SERVER-URL:http://localhost:5000/eureka}
   health:
     circuitBreaker:
       enabled: true
