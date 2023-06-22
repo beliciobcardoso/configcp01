@@ -1,3 +1,11 @@
+spring:
+  zipkin:
+    base-url: ${ZIPKIN-SERVER-URL:http://localhost:9411/}
+  rabbitmq:
+    username: guest
+    password: guest
+    host: ${RABBITMQ-HOST:localhost}
+    port: 5672
 eureka:
   client:
     service-url:
@@ -35,3 +43,7 @@ resilience4j:
         waitDurationInOpenState: 50s
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
+
+queue:
+  mail: queue-mail
+  insert: queue-insert
