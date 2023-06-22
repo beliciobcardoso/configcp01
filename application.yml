@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: ${EURKA-SERVER-URL:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA-SERVER-URL:http://localhost:8761/eureka}
 management:
   health:
     circuitBreaker:
