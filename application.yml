@@ -6,8 +6,8 @@ spring:
   zipkin:
     base-url: ${ZIPKIN-SERVER-URL:http://localhost:9411/}
   rabbitmq:
-    username: guest
-    password: guest
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
     host: ${RABBITMQ-HOST:localhost}
     port: 5672
   health:
