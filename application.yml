@@ -15,11 +15,11 @@ spring:
       enabled: true
   info:
     env:
-      enabled: false
+      enabled: true
   endpoints:
     web:
       exposure:
-        include: health,info,circuitbreakers,circuitbreakerevents
+        include: health,circuitbreakers,circuitbreakerevents
   endpoint:
     health:
       show-details: always
