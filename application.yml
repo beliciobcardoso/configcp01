@@ -15,7 +15,7 @@ spring:
       enabled: true
   info:
     env:
-      enabled: true
+      enabled: false
   endpoints:
     web:
       exposure:
