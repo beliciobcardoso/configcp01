@@ -19,7 +19,7 @@ spring:
   endpoints:
     web:
       exposure:
-        include: health,circuitbreakers,circuitbreakerevents
+        include: health,info,circuitbreakers,circuitbreakerevents
   endpoint:
     health:
       show-details: always
