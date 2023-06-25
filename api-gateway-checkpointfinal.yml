@@ -14,6 +14,10 @@ spring:
           uri: lb://movie-service
           predicates:
             - Path=/api-movie/**
+        - id: SerieRoute
+          uri: lb://serie-service
+          predicates:
+            - Path=/api-serie/**
         - id: GatewayRoute
           uri: lb://API-GATEWAY
           predicates:
