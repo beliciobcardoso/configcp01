@@ -32,6 +32,12 @@ server:
 ## Resilience4J configs for CircuitBreaker Pattern
 resilience4j:
   circuitbreaker:
+    configs:
+      default:
+        recordExceptions:
+          - org.springframework.web.client.HttpServerErrorException
+          - java.util.concurrent.TimeoutException
+          - java.io.IOException
     instances:
       movie-service:
         allowHealthIndicatorToFail: false
@@ -42,6 +48,8 @@ resilience4j:
         waitDurationInOpenState: 50s
         permittedNumberOfCalssInHalfOpenState: 2
         automaticTransitionFromOpenToHalfIfOpenEnabled: true
+      api-gateway:
+        baseConfig: default
 
 queue:
   mail: queue-mail
