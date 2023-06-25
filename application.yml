@@ -46,3 +46,5 @@ resilience4j:
 queue:
   mail: queue-mail
   insert: queue-insert
+  insert-movie: queue-insert-movie
+  update-movie: queue-update-movie
