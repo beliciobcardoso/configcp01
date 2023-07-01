@@ -56,3 +56,7 @@ queue:
   insert: queue-insert
   insert-movie: queue-insert-movie
   update-movie: queue-update-movie
+  serie-service-insert: queue-insert-serie
+  serie-service-select: queue-select-serie
+  movie-service-insert: queue-insert-movie
+  movie-service-select: queue-select-movie
