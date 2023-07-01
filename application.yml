@@ -54,10 +54,8 @@ resilience4j:
 queue:
   mail: queue-mail
   insert: queue-insert
-  insert-movie: queue-insert-movie
-  update-movie: queue-update-movie
+  movie-insert: queue-insert-movie
+  movie-update: queue-update-movie
   serie-insert: queue-insert-serie
   season-insert: queue-insert-season
   chapter-insert: queue-insert-chapter
-  movie-service-insert: queue-insert-movie
-  movie-service-select: queue-select-movie
