@@ -1,14 +1,14 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:5000/eureka/ # http://eureka-server:5000/eureka/
+      defaultZone: http://eureka-server:5000/eureka/ # http://localhost:5000/eureka/
 spring:
   zipkin:
-    base-url: http://localhost:9411/ # http://zipkin:9411/
+    base-url: http://zipkin:9411/ # http://localhost:9411/
   rabbitmq:
     username: guest
     password: guest
-    host: localhost # rabbitmq
+    host: rabbitmq
     port: 5672
   health:
     circuitBreaker:
